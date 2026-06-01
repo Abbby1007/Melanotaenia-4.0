@@ -75,8 +75,12 @@ position = Vector2(80, 63.999992)
 scale = Vector2(0.5234199, 0.52853525)
 
 [node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
-position = Vector2(186, 546)
+position = Vector2(218, 511)
 
 [node name="killPlatform" parent="." unique_id=1305971858 instance=ExtResource("6_mscth")]
-position = Vector2(300, 566)
+position = Vector2(217, 568)
+scale = Vector2(0.44000125, 0.5200006)
+
+[node name="killPlatform2" parent="." unique_id=1715022073 instance=ExtResource("6_mscth")]
+position = Vector2(217, 377)
 scale = Vector2(0.44000125, 0.5200006)
