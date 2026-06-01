@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="2_0xeif"]
 [ext_resource type="PackedScene" uid="uid://c3x33skglstrp" path="res://Player.tscn" id="2_lalqu"]
+[ext_resource type="PackedScene" uid="uid://b8bwxtr758ee4" path="res://kill_platform.tscn" id="3_0xeif"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdvy0"]
 size = Vector2(396, 23)
@@ -22,7 +23,7 @@ position = Vector2(136, 51.5)
 shape = SubResource("RectangleShape2D_gdvy0")
 
 [node name="CharacterBody2D" parent="." unique_id=161638094 instance=ExtResource("2_lalqu")]
-position = Vector2(185, 213)
+position = Vector2(88.00001, 566)
 
 [node name="leftWall" type="StaticBody2D" parent="." unique_id=1563125523]
 position = Vector2(39, 109)
@@ -63,3 +64,6 @@ text = "Q = Orange
 E = Green
 R = Purple
 S = Yellow"
+
+[node name="killPlatform" parent="." unique_id=201136178 instance=ExtResource("3_0xeif")]
+position = Vector2(293, 570)
