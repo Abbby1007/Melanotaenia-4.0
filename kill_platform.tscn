@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://cscqm2joi200q" path="res://kill_platform.gd" id="1_vansf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inp12"]
-size = Vector2(0.081422664, 0.13202879)
+size = Vector2(0.08142264, 0.13202879)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vansf"]
-size = Vector2(184, 43)
+size = Vector2(182, 43)
 
 [node name="killPlatform" type="StaticBody2D" unique_id=201136178]
 script = ExtResource("1_vansf")
