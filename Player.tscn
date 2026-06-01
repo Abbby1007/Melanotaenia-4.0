@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="1_xhfnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
-size = Vector2(121, 122)
+size = Vector2(121, 125.33333)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=161638094]
+[node name="Player" type="CharacterBody2D" unique_id=161638094]
 scale = Vector2(0.301, 0.3)
 script = ExtResource("1_kpjcp")
 
@@ -14,5 +14,5 @@ script = ExtResource("1_kpjcp")
 texture = ExtResource("1_xhfnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=734922911]
-position = Vector2(0.5, -1)
+position = Vector2(0.5, 0.6666641)
 shape = SubResource("RectangleShape2D_kpjcp")

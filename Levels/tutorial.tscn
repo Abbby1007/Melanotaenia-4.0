@@ -22,7 +22,7 @@ texture = ExtResource("2_0xeif")
 position = Vector2(136, 51.5)
 shape = SubResource("RectangleShape2D_gdvy0")
 
-[node name="CharacterBody2D" parent="." unique_id=161638094 instance=ExtResource("2_lalqu")]
+[node name="Player" parent="." unique_id=161638094 instance=ExtResource("2_lalqu")]
 position = Vector2(88.00001, 566)
 
 [node name="leftWall" type="StaticBody2D" parent="." unique_id=1563125523]

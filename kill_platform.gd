@@ -13,3 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("ENTRED")
+	if body.name == "Player": 
+		get_tree().call_deferred("reload_current_scene")
