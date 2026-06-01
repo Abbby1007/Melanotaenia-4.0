@@ -11,13 +11,13 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-
-	if body.is_in_group("player"):
-		if $"../Player".modulate != modulate:
-			get_tree().call_deferred("reload_current_scene")
-	#If player is not the same size as the paltform then kill them
-	#if body.name == "Player":
-		#print("TEST")
+#func _on_area_2d_body_entered(body: Node2D) -> void:
+#
+	#if body.is_in_group("player"):
 		#if $"../Player".modulate != modulate:
-			#get_tree().call_deferred("reload_current_scene")
+				#get_tree().call_deferred("reload_current_scene")
+	##If player is not the same size as the paltform then kill them
+	##if body.name == "Player":
+		##print("TEST")
+		##if $"../Player".modulate != modulate:
+			##get_tree().call_deferred("reload_current_scene")

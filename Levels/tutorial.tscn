@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://cisx6rq34kqnl" path="res://Levels/tutorial.gd" id="1_hga2d"]
 [ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="2_0xeif"]
 [ext_resource type="PackedScene" uid="uid://c3x33skglstrp" path="res://Player.tscn" id="2_lalqu"]
-[ext_resource type="PackedScene" uid="uid://ckwaptfe87p27" path="res://greenKillPlatform.tscn" id="4_gdvy0"]
-[ext_resource type="PackedScene" uid="uid://carl4lwfengce" path="res://purpleKillPlatform.tscn" id="4_hga2d"]
 [ext_resource type="PackedScene" uid="uid://b8bwxtr758ee4" path="res://kill_platform.tscn" id="6_mscth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdvy0"]
@@ -66,26 +64,18 @@ E = Green
 R = Purple
 S = Yellow"
 
-[node name="greenKillPlatform" parent="." unique_id=201136178 instance=ExtResource("4_gdvy0")]
-position = Vector2(252, 168)
-scale = Vector2(0.5600012, 0.43999755)
-
-[node name="purpleKillPlatform" parent="." unique_id=1344698972 instance=ExtResource("4_hga2d")]
-position = Vector2(80, 63.999992)
-scale = Vector2(0.5234199, 0.52853525)
-
 [node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
-position = Vector2(218, 511)
+position = Vector2(168, 524)
 
 [node name="killPlatform" parent="." unique_id=1305971858 instance=ExtResource("6_mscth")]
-position = Vector2(227, 585)
+position = Vector2(171.00002, 581)
 scale = Vector2(0.44000125, 0.5200006)
 
 [node name="killPlatform2" parent="." unique_id=1619791995 instance=ExtResource("6_mscth")]
-position = Vector2(322, 441)
+position = Vector2(177, 381.00003)
 scale = Vector2(0.44000125, 0.5200006)
 
 [node name="killPlatform3" parent="." unique_id=1938964448 instance=ExtResource("6_mscth")]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(203, 410.00003)
+position = Vector2(174, 236)
 scale = Vector2(0.44000125, 0.5200006)
