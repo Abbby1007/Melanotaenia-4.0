@@ -7,7 +7,7 @@
 size = Vector2(120, 120)
 
 [node name="Player" type="RigidBody2D" unique_id=88860119]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
 
