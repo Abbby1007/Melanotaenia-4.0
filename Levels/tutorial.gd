@@ -7,7 +7,7 @@ extends Node2D
 #45 - 357
 func level_generator(amount):
 	for items in amount:
-		platform_initial_position_y -= randf_range(36,54)
+		platform_initial_position_y -= randf_range(120,150)
 		var new_platform = platform_scene.instantiate() as StaticBody2D
 		new_platform.position = Vector2(randf_range(45,357),platform_initial_position_y)
 		platform_container.add_child(new_platform)
