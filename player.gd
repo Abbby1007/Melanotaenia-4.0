@@ -32,13 +32,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("orange"):
 			modulate = Color.ORANGE
 	
-	#When e is pressed it changes to Green	
+	#When e is pressed it changes to sea Green	
 	if Input.is_action_just_pressed("green"):
-			modulate = Color.SEA_GREEN
+			modulate = Color.GREEN
 			
 	#When R is pressed it changes to Purple
 	if Input.is_action_just_pressed("purple"):
-			modulate = Color.MEDIUM_PURPLE
+			modulate = Color.PURPLE
 			
 	#When S is pressed it changes to Yellow
 	if Input.is_action_just_pressed("yellow"):

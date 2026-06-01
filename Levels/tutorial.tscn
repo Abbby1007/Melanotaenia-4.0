@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="2_0xeif"]
 [ext_resource type="PackedScene" uid="uid://c3x33skglstrp" path="res://Player.tscn" id="2_lalqu"]
-[ext_resource type="PackedScene" uid="uid://b8bwxtr758ee4" path="res://kill_platform.tscn" id="3_0xeif"]
+[ext_resource type="PackedScene" uid="uid://ckwaptfe87p27" path="res://greenKillPlatform.tscn" id="4_gdvy0"]
+[ext_resource type="PackedScene" uid="uid://carl4lwfengce" path="res://purpleKillPlatform.tscn" id="4_hga2d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdvy0"]
 size = Vector2(396, 23)
@@ -65,5 +66,10 @@ E = Green
 R = Purple
 S = Yellow"
 
-[node name="killPlatform" parent="." unique_id=201136178 instance=ExtResource("3_0xeif")]
-position = Vector2(293, 570)
+[node name="greenKillPlatform" parent="." unique_id=201136178 instance=ExtResource("4_gdvy0")]
+position = Vector2(303, 558)
+scale = Vector2(0.5600012, 0.43999755)
+
+[node name="purpleKillPlatform" parent="." unique_id=1344698972 instance=ExtResource("4_hga2d")]
+position = Vector2(148, 508.99997)
+scale = Vector2(0.5234199, 0.52853525)

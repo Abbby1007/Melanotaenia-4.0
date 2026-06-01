@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b8bwxtr758ee4"]
+[gd_scene format=3 uid="uid://carl4lwfengce"]
 
-[ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="1_64yms"]
-[ext_resource type="Script" uid="uid://cscqm2joi200q" path="res://kill_platform.gd" id="1_vansf"]
+[ext_resource type="Script" uid="uid://cscqm2joi200q" path="res://kill_platform.gd" id="1_t6e2a"]
+[ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="2_mf8n0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inp12"]
 size = Vector2(0.08142264, 0.13202879)
@@ -9,14 +9,15 @@ size = Vector2(0.08142264, 0.13202879)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vansf"]
 size = Vector2(182, 43)
 
-[node name="killPlatform" type="StaticBody2D" unique_id=201136178]
+[node name="purpleKillPlatform" type="StaticBody2D" unique_id=201136178]
+modulate = Color(0.81178766, 0.38857287, 0.97360384, 1)
 position = Vector2(147, 185)
-script = ExtResource("1_vansf")
+script = ExtResource("1_t6e2a")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1497048453]
 scale = Vector2(1.4400007, 0.35999948)
-texture = ExtResource("1_64yms")
+texture = ExtResource("2_mf8n0")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=399548423]
 position = Vector2(-91, -35)
