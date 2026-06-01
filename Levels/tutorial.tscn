@@ -10,6 +10,7 @@ size = Vector2(396, 23)
 
 [node name="Tutorial" type="Node2D" unique_id=489865250]
 script = ExtResource("1_hga2d")
+platform_scene = ExtResource("6_mscth")
 
 [node name="FloorWall" type="StaticBody2D" parent="." unique_id=312796801]
 position = Vector2(65, 555)
@@ -65,17 +66,14 @@ R = Purple
 S = Yellow"
 
 [node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
-position = Vector2(168, 524)
+position = Vector2(187, 476)
 
-[node name="killPlatform" parent="." unique_id=1305971858 instance=ExtResource("6_mscth")]
-position = Vector2(171.00002, 581)
-scale = Vector2(0.44000125, 0.5200006)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=839100496]
 
-[node name="killPlatform2" parent="." unique_id=1619791995 instance=ExtResource("6_mscth")]
-position = Vector2(782, 305.00003)
-scale = Vector2(0.44000125, 0.5200006)
+[node name="platform_container" type="Node2D" parent="." unique_id=901247753]
 
-[node name="killPlatform3" parent="." unique_id=1938964448 instance=ExtResource("6_mscth")]
-modulate = Color(0, 1, 0, 1)
-position = Vector2(812, 411)
-scale = Vector2(0.44000125, 0.5200006)
+[node name="killPlatform" parent="platform_container" unique_id=201136178 instance=ExtResource("6_mscth")]
+position = Vector2(193, 565.00006)
+
+[node name="killPlatform2" parent="platform_container" unique_id=1655643526 instance=ExtResource("6_mscth")]
+position = Vector2(191, 385.00006)
