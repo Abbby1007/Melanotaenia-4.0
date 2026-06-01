@@ -72,10 +72,10 @@ position = Vector2(171.00002, 581)
 scale = Vector2(0.44000125, 0.5200006)
 
 [node name="killPlatform2" parent="." unique_id=1619791995 instance=ExtResource("6_mscth")]
-position = Vector2(177, 381.00003)
+position = Vector2(782, 305.00003)
 scale = Vector2(0.44000125, 0.5200006)
 
 [node name="killPlatform3" parent="." unique_id=1938964448 instance=ExtResource("6_mscth")]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(174, 236)
+position = Vector2(812, 411)
 scale = Vector2(0.44000125, 0.5200006)

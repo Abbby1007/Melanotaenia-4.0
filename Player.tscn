@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfnw"]
 size = Vector2(121, 18.333328)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
+size = Vector2(122.499985, 20)
+
 [node name="Player" type="CharacterBody2D" unique_id=1764254399 groups=["player"]]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_kpjcp")
@@ -19,5 +22,10 @@ texture = ExtResource("1_xhfnw")
 position = Vector2(0.4999999, 54.166656)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_xhfnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938976319]
+position = Vector2(-1.2499998, 52.499985)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_kpjcp")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
