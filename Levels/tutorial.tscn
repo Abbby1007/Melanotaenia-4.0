@@ -8,18 +8,58 @@ size = Vector2(396, 23)
 
 [node name="Tutorial" type="Node2D" unique_id=489865250]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=312796801]
+[node name="FloorWall" type="StaticBody2D" parent="." unique_id=312796801]
 position = Vector2(65, 555)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=3186749]
+[node name="Sprite2D" type="Sprite2D" parent="FloorWall" unique_id=3186749]
 position = Vector2(135, 51.5)
 scale = Vector2(3.109375, 0.1953125)
 texture = ExtResource("2_0xeif")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=509378255]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorWall" unique_id=509378255]
 position = Vector2(136, 51.5)
 shape = SubResource("RectangleShape2D_gdvy0")
 
 [node name="CharacterBody2D" parent="." unique_id=161638094 instance=ExtResource("2_lalqu")]
 position = Vector2(185, 213)
+
+[node name="leftWall" type="StaticBody2D" parent="." unique_id=1563125523]
+position = Vector2(39, 109)
+rotation = 1.5707964
+scale = Vector2(1.6392032, 1)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="leftWall" unique_id=302554704]
+position = Vector2(135, 51.5)
+scale = Vector2(3.109375, 0.1953125)
+texture = ExtResource("2_0xeif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftWall" unique_id=960224297]
+position = Vector2(136, 51.5)
+shape = SubResource("RectangleShape2D_gdvy0")
+
+[node name="rightWall" type="StaticBody2D" parent="." unique_id=1171443375]
+position = Vector2(334.99997, 538)
+rotation = -1.5707964
+scale = Vector2(1.6000395, 1.6288866)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="rightWall" unique_id=783067918]
+position = Vector2(135, 51.5)
+scale = Vector2(3.109375, 0.1953125)
+texture = ExtResource("2_0xeif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightWall" unique_id=1358770167]
+position = Vector2(136, 51.5)
+shape = SubResource("RectangleShape2D_gdvy0")
+
+[node name="Label" type="Label" parent="." unique_id=2076779496]
+offset_left = 279.0
+offset_top = 394.0
+offset_right = 367.0
+offset_bottom = 495.0
+text = "Q = Orange
+E = Green
+R = Purple
+S = Yellow"
