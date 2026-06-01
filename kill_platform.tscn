@@ -9,7 +9,7 @@ size = Vector2(0.08142264, 0.13202879)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vansf"]
 size = Vector2(182, 43)
 
-[node name="killPlatform" type="StaticBody2D" unique_id=201136178]
+[node name="killPlatform" type="StaticBody2D" unique_id=201136178 groups=["paddles"]]
 position = Vector2(147, 185)
 script = ExtResource("1_vansf")
 metadata/_edit_group_ = true

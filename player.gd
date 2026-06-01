@@ -5,6 +5,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+var jump_Speed = 600
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -43,3 +45,15 @@ func _physics_process(delta: float) -> void:
 	#When S is pressed it changes to Yellow
 	if Input.is_action_just_pressed("yellow"):
 			modulate = Color.YELLOW
+
+# MAKES PLAYER BOUNCE
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("PLATFORMMM")
+	#If player is not the same size as the paltform then kill them
+	if body.name == "killPlatform":
+		# Set the velocity vector (0 for X axis, negative jump speed for Y axis to go UP)
+		velocity = Vector2(0, -jump_Speed)
+
+		# Tell Godot to actually move the character using that velocity
+		move_and_slide()
+			

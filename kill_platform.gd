@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("ENTRED")
 	#If player is not the same size as the paltform then kill them
-	if body.name == "Player": 
+	if body.name == "Player":
+		 
 		if $"../Player".modulate != modulate:
 			get_tree().call_deferred("reload_current_scene")
