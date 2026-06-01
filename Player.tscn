@@ -4,12 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dumxe23c2jswg" path="res://icon.svg" id="1_xhfnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfnw"]
-size = Vector2(121, 125.33333)
+size = Vector2(121, 18.333328)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
-size = Vector2(125, 124)
-
-[node name="Player" type="CharacterBody2D" unique_id=1764254399]
+[node name="Player" type="CharacterBody2D" unique_id=1764254399 groups=["player"]]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_kpjcp")
 
@@ -19,11 +16,8 @@ texture = ExtResource("1_xhfnw")
 [node name="Area2D" type="Area2D" parent="." unique_id=862088622]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1266005838]
-position = Vector2(0.5, 0.6666641)
+position = Vector2(0.4999999, 54.166656)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_xhfnw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1272893860]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_kpjcp")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

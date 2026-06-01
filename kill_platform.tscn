@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://cscqm2joi200q" path="res://kill_platform.gd" id="1_vansf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inp12"]
-size = Vector2(0.08142264, 0.017221197)
+size = Vector2(0.08142264, 0.13489905)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vansf"]
-size = Vector2(184, 43)
+size = Vector2(184, 290.24585)
 
 [node name="killPlatform" type="StaticBody2D" unique_id=201136178 groups=["paddles"]]
 position = Vector2(147, 185)
@@ -23,12 +23,12 @@ position = Vector2(-91, -35)
 scale = Vector2(-2259.8132, -348.40887)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=926169051]
-position = Vector2(-0.040268794, -0.043052852)
+position = Vector2(-0.040268794, -0.101891756)
 scale = Vector2(0.9999999, 1)
 shape = SubResource("RectangleShape2D_inp12")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1883029204]
-position = Vector2(0, -20)
+position = Vector2(0, -0.22003174)
 scale = Vector2(1, 0.16000247)
 shape = SubResource("RectangleShape2D_vansf")
 

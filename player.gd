@@ -50,10 +50,13 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("PLATFORMMM")
 	#If player is not the same size as the paltform then kill them
-	if body.name == "killPlatform":
+	if body.is_in_group("paddles"):
 		# Set the velocity vector (0 for X axis, negative jump speed for Y axis to go UP)
 		velocity = Vector2(0, -jump_Speed)
 
 		# Tell Godot to actually move the character using that velocity
 		move_and_slide()
+		if(modulate != body.modulate):
+			get_tree().call_deferred("reload_current_scene")
+
 			
