@@ -8,6 +8,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdvy0"]
 size = Vector2(396, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hga2d"]
+size = Vector2(1142.5005, 40)
+
 [node name="Tutorial" type="Node2D" unique_id=489865250]
 script = ExtResource("1_hga2d")
 platform_scene = ExtResource("6_mscth")
@@ -68,8 +71,6 @@ S = Yellow"
 [node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
 position = Vector2(187, 476)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=839100496]
-
 [node name="platform_container" type="Node2D" parent="." unique_id=901247753]
 
 [node name="killPlatform" parent="platform_container" unique_id=201136178 instance=ExtResource("6_mscth")]
@@ -77,3 +78,16 @@ position = Vector2(193, 565.00006)
 
 [node name="killPlatform2" parent="platform_container" unique_id=1655643526 instance=ExtResource("6_mscth")]
 position = Vector2(191, 385.00006)
+
+[node name="camera" type="Camera2D" parent="." unique_id=839100496]
+position = Vector2(180, 320)
+scale = Vector2(0.4, 0.4)
+
+[node name="platform_cleaner" type="Area2D" parent="camera" unique_id=1998959459]
+
+[node name="collison" type="CollisionShape2D" parent="camera/platform_cleaner" unique_id=1584327518]
+position = Vector2(61.249878, 824.99994)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_hga2d")
+
+[connection signal="body_entered" from="camera/platform_cleaner" to="." method="_on_platform_cleaner_body_entered"]
