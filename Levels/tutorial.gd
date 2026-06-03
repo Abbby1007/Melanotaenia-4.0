@@ -6,6 +6,10 @@ extends Node2D
 @onready var camera := $camera as Camera2D
 @onready var player := $Player as CharacterBody2D
 
+@onready var score_label := $camera/score as Label
+@onready var camera_start_position = $camera.position.y 
+
+var score = 0
 
 @export var platform_scene: PackedScene
 #45 - 357
@@ -25,6 +29,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player.position.y < camera.position.y:
 		camera.position.y = player.position.y
+	score_update()
 
 func delete_object(obstacle):
 	if obstacle.name == "Player":
@@ -36,3 +41,7 @@ func delete_object(obstacle):
 
 func _on_platform_cleaner_body_entered(body: Node2D) -> void:
 	delete_object(body)
+
+func score_update():
+	score = camera_start_position - camera.position.y
+	score_label.text = str(int(score))

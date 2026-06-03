@@ -87,4 +87,13 @@ position = Vector2(61.249878, 824.99994)
 scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_hga2d")
 
+[node name="score" type="Label" parent="camera" unique_id=588057342]
+offset_left = -192.49998
+offset_top = -782.5
+offset_right = 265.0
+offset_bottom = -645.5
+theme_override_font_sizes/font_size = 100
+text = "0"
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="camera/platform_cleaner" to="." method="_on_platform_cleaner_body_entered"]
