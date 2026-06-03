@@ -27,7 +27,7 @@ position = Vector2(191, 526)
 [node name="platform_container" type="Node2D" parent="." unique_id=901247753]
 
 [node name="killPlatform" parent="platform_container" unique_id=201136178 instance=ExtResource("6_mscth")]
-position = Vector2(191.00002, 583)
+position = Vector2(195, 569)
 
 [node name="camera" type="Camera2D" parent="." unique_id=839100496]
 position = Vector2(180, 320)

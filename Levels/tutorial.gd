@@ -9,7 +9,7 @@ extends Node2D
 @onready var score_label := $camera/score as Label
 @onready var camera_start_position = $camera.position.y 
 
-var score = 0
+var score := 0
 
 @export var platform_scene: PackedScene
 #45 - 357
@@ -17,7 +17,7 @@ func level_generator(amount):
 	for items in amount:
 		platform_initial_position_y -= randf_range(150,170)
 		var new_platform = platform_scene.instantiate() as StaticBody2D
-		new_platform.position = Vector2(randf_range(45,320),platform_initial_position_y)
+		new_platform.position = Vector2(randf_range(41,321),platform_initial_position_y)
 		platform_container.call_deferred("add_child",new_platform)
 	print(amount)
 
@@ -34,6 +34,8 @@ func _process(delta: float) -> void:
 func delete_object(obstacle):
 	if obstacle.name == "Player":
 		print("Player fell")
+		if score > Global.highscore:
+			Global.highscore = score
 		get_tree().change_scene_to_file("res://title_screen.tscn")
 		#This is where the death screen will pop up
 	else:

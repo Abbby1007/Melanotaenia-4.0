@@ -1,9 +1,10 @@
 extends Control
-
+#WILL NEED TO FIX THE SCRIPT AND POSITIONING OF EVERYTHING LATER
+@onready var highscore := $highscore as Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	highscore.text = "HIGHSCORE:\n" + str(Global.highscore)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
