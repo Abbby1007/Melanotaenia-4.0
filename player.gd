@@ -45,7 +45,9 @@ func _physics_process(delta: float) -> void:
 	#When S is pressed it changes to Yellow
 	if Input.is_action_just_pressed("yellow"):
 			modulate = Color.YELLOW
-
+			
+func go_title_scene():
+	get_tree().change_scene_to_file("res://title_screen.tscn")
 # MAKES PLAYER BOUNCE
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("PLATFORMMM")
@@ -57,6 +59,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		# Tell Godot to actually move the character using that velocity
 		move_and_slide()
 		if(modulate != body.modulate):
-			get_tree().call_deferred("reload_current_scene")
+			if Global.gScore > Global.highscore:
+				Global.highscore = Global.gScore
+			call_deferred("go_title_scene")
 
 			

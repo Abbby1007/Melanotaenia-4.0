@@ -30,13 +30,16 @@ func _process(delta: float) -> void:
 	if player.position.y < camera.position.y:
 		camera.position.y = player.position.y
 	score_update()
-
+	
+func go_title_scene():
+	get_tree().change_scene_to_file("res://title_screen.tscn")
+	
 func delete_object(obstacle):
 	if obstacle.name == "Player":
 		print("Player fell")
 		if score > Global.highscore:
 			Global.highscore = score
-		get_tree().change_scene_to_file("res://title_screen.tscn")
+		call_deferred("go_title_scene")
 		#This is where the death screen will pop up
 	else:
 		obstacle.queue_free()
@@ -47,4 +50,5 @@ func _on_platform_cleaner_body_entered(body: Node2D) -> void:
 
 func score_update():
 	score = camera_start_position - camera.position.y
+	Global.gScore = score
 	score_label.text = str(int(score))
