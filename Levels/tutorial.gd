@@ -34,6 +34,7 @@ func _process(delta: float) -> void:
 func delete_object(obstacle):
 	if obstacle.name == "Player":
 		print("Player fell")
+		get_tree().change_scene_to_file("res://title_screen.tscn")
 		#This is where the death screen will pop up
 	else:
 		obstacle.queue_free()
