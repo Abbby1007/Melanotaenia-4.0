@@ -66,5 +66,18 @@ theme_override_font_sizes/font_size = 30
 text = "HIGHSCORE:"
 horizontal_alignment = 1
 
+[node name="Instructions" type="Label" parent="." unique_id=999051587]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 484.0
+offset_right = 345.0
+offset_bottom = 605.0
+theme_override_font_sizes/font_size = 20
+text = "Jump (space or up arrow)
+ on the white platform to begin.
+if the player is a different color
+ from the platform your out"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="start-btn" to="." method="_on_startbtn_pressed"]
 [connection signal="pressed" from="quit-btn" to="." method="_on_quitbtn_pressed"]

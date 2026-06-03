@@ -30,19 +30,22 @@ func _physics_process(delta: float) -> void:
 
 	#based on players input their color changes
 	
-	#When Q is pressed it changes to Orange
+	#When Q is pressed it changes to SANDY BROWN
+	#Color(0.95686275, 0.6431373, 0.3764706, 1)
 	if Input.is_action_just_pressed("orange"):
-			modulate = Color.ORANGE
+			modulate = Color(0.95686275, 0.6431373, 0.3764706, 1)
 	
-	#When e is pressed it changes to sea Green	
+	#When e is pressed it changes to MEDIUM SEA GREEN
+	# EMDIUM Sea Green RBG = Color(0, 0.98039216, 0.6039216, 1)
 	if Input.is_action_just_pressed("green"):
-			modulate = Color.GREEN
+			modulate = Color(0, 0.98039216, 0.6039216, 1)
+			
 			
 	#When R is pressed it changes to Purple
 	if Input.is_action_just_pressed("purple"):
 			modulate = Color.PURPLE
 			
-	#When S is pressed it changes to Yellow
+	#When W is pressed it changes to Yellow
 	if Input.is_action_just_pressed("yellow"):
 			modulate = Color.YELLOW
 			
