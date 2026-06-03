@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Melanotaenia 4.0"
-run/main_scene="uid://ckbiux720kh13"
+run/main_scene="uid://dvtbpun2d53aq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
