@@ -11,10 +11,10 @@ extends Node2D
 #45 - 357
 func level_generator(amount):
 	for items in amount:
-		platform_initial_position_y -= randf_range(120,150)
+		platform_initial_position_y -= randf_range(150,170)
 		var new_platform = platform_scene.instantiate() as StaticBody2D
-		new_platform.position = Vector2(randf_range(45,357),platform_initial_position_y)
-		platform_container.add_child(new_platform)
+		new_platform.position = Vector2(randf_range(45,320),platform_initial_position_y)
+		platform_container.call_deferred("add_child",new_platform)
 	print(amount)
 
 func _ready() -> void:
@@ -26,12 +26,13 @@ func _process(delta: float) -> void:
 	if player.position.y < camera.position.y:
 		camera.position.y = player.position.y
 
-
+func delete_object(obstacle):
+	if obstacle.name == "Player":
+		print("Player fell")
+		#This is where the death screen will pop up
+	else:
+		obstacle.queue_free()
+		level_generator(1)
 
 func _on_platform_cleaner_body_entered(body: Node2D) -> void:
-	call_deferred("_delete_and_generate", body)
-
-func _delete_and_generate(body: Node2D) -> void:
-	if is_instance_valid(body):
-		body.queue_free()
-	level_generator(1)
+	delete_object(body)

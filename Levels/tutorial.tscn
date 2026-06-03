@@ -69,15 +69,12 @@ R = Purple
 S = Yellow"
 
 [node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
-position = Vector2(187, 476)
+position = Vector2(191, 526)
 
 [node name="platform_container" type="Node2D" parent="." unique_id=901247753]
 
 [node name="killPlatform" parent="platform_container" unique_id=201136178 instance=ExtResource("6_mscth")]
-position = Vector2(193, 565.00006)
-
-[node name="killPlatform2" parent="platform_container" unique_id=1655643526 instance=ExtResource("6_mscth")]
-position = Vector2(191, 385.00006)
+position = Vector2(191.00002, 583)
 
 [node name="camera" type="Camera2D" parent="." unique_id=839100496]
 position = Vector2(180, 320)
