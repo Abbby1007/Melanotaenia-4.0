@@ -41,13 +41,13 @@ func _physics_process(delta: float) -> void:
 			modulate = Color(0, 0.98039216, 0.6039216, 1)
 			
 			
-	#When R is pressed it changes to Purple
+	#When R is pressed it changes to Plum
 	if Input.is_action_just_pressed("purple"):
-			modulate = Color.PURPLE
+			modulate = Color(0.8666667, 0.627451, 0.8666667, 1)
 			
 	#When W is pressed it changes to Yellow
 	if Input.is_action_just_pressed("yellow"):
-			modulate = Color.YELLOW
+			modulate = Color(1, 0.84313726, 0, 1) 
 			
 func go_title_scene():
 	get_tree().change_scene_to_file("res://title_screen.tscn")

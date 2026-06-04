@@ -15,7 +15,7 @@ var score := 0
 #45 - 357
 func level_generator(amount):
 	for items in amount:
-		var num = randi_range(0,1) 
+		var num = randi_range(0,3) 
 		platform_initial_position_y -= randf_range(150,170)
 		var new_platform = platform_scene.instantiate() as StaticBody2D
 		if(num == 0):
@@ -24,6 +24,12 @@ func level_generator(amount):
 		elif (num == 1):
 			#Sadny brown
 			new_platform.modulate = Color(0.95686275, 0.6431373, 0.3764706, 1)
+		elif (num == 2):
+			#Plum
+			new_platform.modulate =Color(0.8666667, 0.627451, 0.8666667, 1)
+		elif (num == 3):
+			#Gold
+			new_platform.modulate = Color(1, 0.84313726, 0, 1) 
 			
 		
 		new_platform.position = Vector2(randf_range(41,321),platform_initial_position_y)

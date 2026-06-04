@@ -63,7 +63,7 @@ theme_override_font_sizes/font_size = 45
 text = "Q = Orange
 E = Green
 R = Purple
-S = Yellow"
+W = Yellow"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=927377810]
 position = Vector2(64, 638)
