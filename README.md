@@ -3,6 +3,8 @@
 Melanotaenia 4.0 is a doodle jump paraody with a twist where the player can only touch a platform if it is the same color.
 The goal is to a score as high as possible
 
+This game was originally for Hack Club's juice jam around March 2025, but I gave up working on it, so I am very proud of myself for stikcing through and finsihing it.
+
 Demo Link: https://abbby1007.itch.io/melanotaenia-40
 
 Movement Control:
@@ -23,6 +25,7 @@ R = Purple
 
 W = Yellow
 
+For features the game is pretty straight forward. There is a main menu, then there is the game where the player will have to match the character's color to the platform.
 
 <img width="630" height="500" alt="Melanotaenia 4 0 Cover image" src="https://github.com/user-attachments/assets/46a7674d-353f-4765-972d-527d7fd1023b" />
 
