@@ -3,7 +3,7 @@
 Melanotaenia 4.0 is a doodle jump paraody with a twist where the player can only touch a platform if it is the same color.
 The goal is to a score as high as possible
 
-This game was originally for Hack Club's juice jam around March 2025, but I gave up working on it, so I am very proud of myself for sticking through and finsihing it.
+This game was originally for Hack Club's juice jam around March 2025, but I gave up working on it, so I am very proud of myself for sticking through and finishing this 4.0 version.
 
 The Theme is inspired by stardance
 
