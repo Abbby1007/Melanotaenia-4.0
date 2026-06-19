@@ -1,14 +1,92 @@
-extends Node
+[gd_scene format=3 uid="uid://ckbiux720kh13"]
 
-var highscore := 0
-var gScore := 0
+[ext_resource type="Script" uid="uid://cisx6rq34kqnl" path="res://Levels/tutorial.gd" id="1_hga2d"]
+[ext_resource type="PackedScene" uid="uid://c3x33skglstrp" path="res://Player.tscn" id="2_lalqu"]
+[ext_resource type="Texture2D" uid="uid://bx0j0ts3mxjh3" path="res://art/space background.png" id="3_hga2d"]
+[ext_resource type="Texture2D" uid="uid://dwe8tqk3fvs27" path="res://art/platform.png" id="4_gdvy0"]
+[ext_resource type="PackedScene" uid="uid://b8bwxtr758ee4" path="res://kill_platform.tscn" id="6_mscth"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hga2d"]
+size = Vector2(1142.5005, 40)
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mscth"]
+size = Vector2(99, 17.024162)
 
+[node name="Tutorial" type="Node2D" unique_id=489865250]
+script = ExtResource("1_hga2d")
+platform_scene = ExtResource("6_mscth")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+[node name="BG" type="CanvasLayer" parent="." unique_id=724882250]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="BG" unique_id=1457146148]
+offset_right = 360.0
+offset_bottom = 640.0
+texture = ExtResource("3_hga2d")
+
+[node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
+position = Vector2(82, 592)
+
+[node name="platform_container" type="Node2D" parent="." unique_id=901247753]
+
+[node name="killPlatform" parent="platform_container" unique_id=201136178 instance=ExtResource("6_mscth")]
+position = Vector2(289, 572)
+
+[node name="camera" type="Camera2D" parent="." unique_id=839100496]
+position = Vector2(180, 320)
+scale = Vector2(0.4, 0.4)
+
+[node name="platform_cleaner" type="Area2D" parent="camera" unique_id=1998959459]
+position = Vector2(-4.9999995, 69.99999)
+
+[node name="collison" type="CollisionShape2D" parent="camera/platform_cleaner" unique_id=1584327518]
+position = Vector2(61.249878, 824.99994)
+scale = Vector2(2.3333306, 1.3168186)
+shape = SubResource("RectangleShape2D_hga2d")
+
+[node name="score" type="Label" parent="camera" unique_id=588057342]
+offset_left = -192.5
+offset_top = -780.0
+offset_right = 265.0
+offset_bottom = -643.0
+theme_override_constants/outline_size = 23
+theme_override_font_sizes/font_size = 100
+text = "0"
+horizontal_alignment = 1
+
+[node name="arrows" type="Label" parent="camera" unique_id=603754170]
+offset_left = -430.00003
+offset_top = -780.0
+offset_right = -263.00003
+offset_bottom = -667.0
+scale = Vector2(1.760569, 1.3501084)
+theme_override_font_sizes/font_size = 40
+text = "< = Left
+> = Right"
+
+[node name="Label" type="Label" parent="camera" unique_id=2076779496]
+offset_left = 194.99997
+offset_top = -785.0
+offset_right = 438.99997
+offset_bottom = -524.0
+theme_override_font_sizes/font_size = 45
+text = "Q = Orange
+E = Green
+R = Purple
+W = Yellow"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=927377810]
+position = Vector2(64, 638)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1549579705]
+position = Vector2(34.5, 7.5)
+scale = Vector2(6.6229367, 2.9304194)
+texture = ExtResource("4_gdvy0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1447616837]
+position = Vector2(34.5, -0.016845703)
+scale = Vector2(2.0983624, 1.9951792)
+shape = SubResource("RectangleShape2D_mscth")
+
+[connection signal="body_entered" from="camera/platform_cleaner" to="." method="_on_platform_cleaner_body_entered"]

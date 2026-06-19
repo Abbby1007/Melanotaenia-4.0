@@ -1,69 +1,11 @@
-extends CharacterBody2D
-# This variable updates the sprite's texture modulation when changed in the inspector
+extends StaticBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-var jump_Speed = 600
-
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
 
 
-	#based on players input their color changes
-	
-	#When Q is pressed it changes to SANDY BROWN
-	#Color(0.95686275, 0.6431373, 0.3764706, 1)
-	if Input.is_action_just_pressed("orange"):
-			modulate = Color(0.95686275, 0.6431373, 0.3764706, 1)
-	
-	#When e is pressed it changes to MEDIUM SEA GREEN
-	# EMDIUM Sea Green RBG = Color(0, 0.98039216, 0.6039216, 1)
-	if Input.is_action_just_pressed("green"):
-			modulate = Color(0, 0.98039216, 0.6039216, 1)
-			
-			
-	#When R is pressed it changes to Plum
-	if Input.is_action_just_pressed("purple"):
-			modulate = Color(0.8666667, 0.627451, 0.8666667, 1)
-			
-	#When W is pressed it changes to Yellow
-	if Input.is_action_just_pressed("yellow"):
-			modulate = Color(1, 0.84313726, 0, 1) 
-			
-func go_title_scene():
-	get_tree().change_scene_to_file("res://title_screen.tscn")
-# MAKES PLAYER BOUNCE
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("PLATFORMMM")
-	#If player is not the same size as the paltform then kill them
-	if body.is_in_group("paddles"):
-		# Set the velocity vector (0 for X axis, negative jump speed for Y axis to go UP)
-		velocity = Vector2(0, -jump_Speed)
-
-		# Tell Godot to actually move the character using that velocity
-		move_and_slide()
-		if(modulate != body.modulate):
-			if Global.gScore > Global.highscore:
-				Global.highscore = Global.gScore
-			call_deferred("go_title_scene")
-
-			
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
