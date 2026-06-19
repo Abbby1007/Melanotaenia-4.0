@@ -25,12 +25,12 @@ offset_bottom = 640.0
 texture = ExtResource("3_hga2d")
 
 [node name="Player" parent="." unique_id=1764254399 instance=ExtResource("2_lalqu")]
-position = Vector2(82, 592)
+position = Vector2(82, 576)
 
 [node name="platform_container" type="Node2D" parent="." unique_id=901247753]
 
 [node name="killPlatform" parent="platform_container" unique_id=201136178 instance=ExtResource("6_mscth")]
-position = Vector2(289, 572)
+position = Vector2(289, 556)
 
 [node name="camera" type="Camera2D" parent="." unique_id=839100496]
 position = Vector2(180, 320)
@@ -40,7 +40,7 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(-4.9999995, 69.99999)
 
 [node name="collison" type="CollisionShape2D" parent="camera/platform_cleaner" unique_id=1584327518]
-position = Vector2(61.249878, 824.99994)
+position = Vector2(61.249878, 784.9999)
 scale = Vector2(2.3333306, 1.3168186)
 shape = SubResource("RectangleShape2D_hga2d")
 
@@ -62,7 +62,8 @@ offset_bottom = -667.0
 scale = Vector2(1.760569, 1.3501084)
 theme_override_font_sizes/font_size = 40
 text = "< = Left
-> = Right"
+> = Right
+^ = jump"
 
 [node name="Label" type="Label" parent="camera" unique_id=2076779496]
 offset_left = 194.99997
@@ -76,7 +77,7 @@ R = Purple
 W = Yellow"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=927377810]
-position = Vector2(64, 638)
+position = Vector2(64, 621.99994)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1549579705]
