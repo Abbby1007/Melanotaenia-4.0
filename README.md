@@ -21,8 +21,8 @@ E = Green
 
 R = Purple
 
-
 W = Yellow
 
 
+<img width="630" height="500" alt="Melanotaenia 4 0 Cover image" src="https://github.com/user-attachments/assets/46a7674d-353f-4765-972d-527d7fd1023b" />
 
