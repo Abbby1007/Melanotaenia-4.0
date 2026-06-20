@@ -29,5 +29,12 @@ W = Yellow
 
 For features the game is pretty straight forward. There is a main menu, then there is the game where the player will have to match the character's color to the platform.
 
+Image of Game below:
+
 <img width="630" height="500" alt="Melanotaenia 4 0 Cover image" src="https://github.com/user-attachments/assets/46a7674d-353f-4765-972d-527d7fd1023b" />
+
+Demo Video below: 
+
+https://github.com/user-attachments/assets/237a149f-c0c7-4a58-91ff-a95d19fef54c
+
 
